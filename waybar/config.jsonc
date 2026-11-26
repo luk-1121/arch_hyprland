@@ -1,0 +1,74 @@
+{
+	// Basic configuration
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+	"margin-top": 15,
+	"margin-left": 20,
+	"margin-right": 20,
+
+	// Modules layout
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+	"modules-right": ["network", "pulseaudio", "cpu", "memory", "battery"],
+
+	// Modules configuration
+	 "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "󰝥",
+      "default": ""
+    }
+  },
+
+	"clock": {
+		"format": "{:%a %d %b  %H:%M}",
+    "tooltip": false
+  },
+
+	"network": {
+    "format-wifi": "󰖩 {essid}",
+		"tooltip-format-wifi": "{ipaddr}",
+    "format-ethernet": " {ifname}",
+		"tooltip-format-ethernet": "{ipaddr}",
+    "format-disconnected": "",
+		"tooltip-format-disconnected": "Not Connected!"
+  },
+
+	"pulseaudio": {
+    "format": "{icon} {volume}%", 
+    "format-icons": {
+    "default": ["", "", ""],
+		"format-muted": "󰝟",
+		"headphone": "󰋋"
+  },
+    "on-click": "pavucontrol"
+  },
+
+	"cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "tooltip": true
+  },
+
+  "memory": {
+    "interval": 10,
+    "format": " {percentage}%",
+    "tooltip": true
+  },
+
+	"battery": {
+		"interval": 10,
+		"states": {
+		"good": 100,
+		"critical": 25
+	},
+	  "format": "{icon} {capacity}%",
+		"format-charging": "{icon} {capacity}%",
+		"format-icons": {
+		"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+		}
+	}
+}

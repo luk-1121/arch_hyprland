@@ -1,0 +1,6 @@
+[mgr]
+show_hidden = true
+
+[flavor]
+use = "dracula"
+

@@ -1,0 +1,12 @@
+format = '$directory$character'
+
+[directory]
+truncation_length = 0
+read_only = ''
+style = 'bold #BD93F9'
+
+[character]
+disabled = false
+success_symbol = "[](bold #A6E3A1)"
+error_symbol = "[](bold #F18AA7)"
+
